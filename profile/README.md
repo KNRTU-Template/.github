@@ -25,9 +25,10 @@
     import requests  
   
     params = {'layout_name': 'layout_20_01_2024.tif'}
-	files = {'file': ('filename.tif', open('crop_0_1_0000.tif', 'rb'))}
-	response = requests.post(url='http://localhost/api/geo', params=params, files=files)
-	print(response.json())    
+    filename = 'crop_0_1_0000.tif'
+    files = {'file': (filename, open(filename, 'rb'))}
+    response = requests.post(url='http://localhost/api/geo', params=params, files=files)
+    print(response.json())    
     ```  
 2. Получение координат  
     ```python  
